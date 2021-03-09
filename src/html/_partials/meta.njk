@@ -1,0 +1,42 @@
+{% set metaPageTitle = siteName  %}
+
+{% if pageTitle %}
+   {% set metaPageTitle = pageTitle + ' | ' + siteName  %}
+{% endif %}
+
+<title>{{ metaPageTitle }}</title>
+
+{% if canonical %}
+   <link rel="canonical" href="{{ canonical }}">
+{% endif %}
+
+{% if metaDescription %}
+   <meta name="description" content="{{ metaDescription }}">
+{% endif %}
+
+{% if metaKeywords %}
+   <meta name="keywords" content="{{ metaKeywords }}">
+{% endif %}
+
+{% if canonical %}
+   <meta property="og:site_name" content="{{ siteName }}">
+   <meta property="og:title" content="{{ metaPageTitle }}">
+   <meta property="og:locale" content="{{ locale }}">
+
+   {% if metaDescription %}
+      <meta name="og:description" content="{{ metaDescription }}">
+   {% endif %}
+
+   {% if metaImage %}
+      <meta property="og:image" content="{{ domain + metaImage }}">
+   {% endif %}
+
+   <meta property="og:type" content="website">
+   <meta property="og:url" content="{{ canonical }}">
+{% endif %}
+
+{% block custom_meta %}{% endblock %}
+
+<!--
+   Add Favicon Data
+-->

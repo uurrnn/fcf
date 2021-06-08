@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* $headingfont: Montserrat 700;
+$bodyfont: Montserrat 400;
+$orange: #E78C19;
+$lightorange: rgba(#E78C19, .33);
+$grey: #E2E2E2;  */
+
+.social {
+    background: #E78C19;
+    padding: 30px 0;
+}
+
+.copy {
+    border-bottom: 10px #E78C19 solid;
+}

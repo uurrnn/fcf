@@ -1,2 +1,129 @@
-<header role="banner">
+{%
+    set navItems = [
+        {
+            name: "Home",
+            link: "/"
+        },
+        {
+            name: "About",
+            link: "/about"
+            subNavItems: [
+                {
+                    name: "Board",
+                    link: "/board"
+                },
+                {
+                    name: "Financial Review",
+                    link: "/financial-review"
+                },
+                {
+                    name: "Newsletters",
+                    link: "/newsletters"
+                },
+                {
+                    name: "Ivy Plus Academy",
+                    link: "/ivyplus"
+                }
+            ]
+        },
+        {
+            name: "Events",
+            link: "/events"
+            subNavItems: [
+                {
+                    name: "Class Events",
+                    link: "/events"
+                },
+                {
+                    name: "Class Reunions",
+                    link: "/reunions"
+                },
+                {
+                    name: "60's Proud Reunion",
+                    link: "/60s-proud"
+                },
+                {
+                    name: "Hall of Fame",
+                    link: "/hall-of-fame"
+                },
+                {
+                    name: "Alumni Band",
+                    link: "/alumni-band"
+                },
+                {
+                    name: "Calendar",
+                    link: "/calendar"
+                }
+            ]
+        },
+        {
+            name: "Support",
+            link: "/support"
+            subNavItems: [
+                {
+                    name: "Alumni Association Membership",
+                    link: "/membership"
+                },
+                {
+                    name: "Ways to Give",
+                    link: "/give"
+                },
+                {
+                    name: "Alumni Auditorium",
+                    link: "/alumni-auditorium"
+                },
+                {
+                    name: "Fundraising Events",
+                    link: "/fundraising"
+                }
+            ]
+        },
+        {
+            name: "Members",
+            link: "#"
+        },
+        {
+            name: "Gallery",
+            link: "/gallery"   
+        }
+    ]
+%}
+
+<header class="header" role="banner">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <img src="/images/logo.png" alt="Fern Creek Alumni Logo">
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div class="navbar-menu">
+            <div class="navbar-end">
+
+                {% for item in navItems %}
+                    {% if item.subNavItems %}
+                        <div class="navbar-item had-dropdown is-hoverable">
+                            <a href={{item.link}} class="navbar-link is-arrowless">{{item.name}}</a>
+                            <div class="navbar-dropdown">
+                                {% for subItem in item.subNavItems %}
+                                    <a href={{subItem.link}} class="navbar-item">{{subItem.nam}}</a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% else %}
+                        <a href={{item.link}} class="navbar-item">{{item.name}}</a>
+                    {% endif %}
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+    </nav>
 </header>

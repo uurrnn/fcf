@@ -1,0 +1,22 @@
+.header {
+   border-top: 20px solid $orange;
+
+   .navbar-item, .navbar-link {
+      text-transform: uppercase;
+      font-size: 1.125rem;
+      padding: .5rem 1.25rem;
+    
+      &.has-dropdown {
+          padding: 0;
+      }
+   }
+
+   // overwriting default logo size
+   .navbar-brand > .navbar-item > img {
+      max-height: 3rem;
+
+      @media screen and (min-width: 960px) {
+         max-height: 4rem;
+      }
+   }
+}

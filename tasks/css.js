@@ -6,8 +6,6 @@ import cssnano from 'cssnano';
 import colors from 'colors/safe';
 import postcss from 'gulp-postcss';
 import postcssImport from 'postcss-import';
-import tailwindCss from 'tailwindcss';
-import autoprefixer from 'autoprefixer';
 import postcssPresetEnv from 'postcss-preset-env';
 import sourcemaps from 'gulp-sourcemaps';
 import beautifyCode from 'gulp-beautify-code';
@@ -51,8 +49,6 @@ const srcFolders = [
 */
 const postCssPlugins = [
    postcssImport(),
-   tailwindCss(),
-   autoprefixer(),
    postcssPresetEnv({
       stage: 0,
       features: {

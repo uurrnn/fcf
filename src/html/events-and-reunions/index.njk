@@ -1,0 +1,20 @@
+{% set pageTitle = "Events and Reunions" %}
+{% set crumb = null %}
+{% set crumbSlug = 'events-and-reunions' %}
+
+{% extends '_layouts/default.njk' %}
+
+{% import '_macros/hero.njk' as hero %}
+
+{% block main %}
+    {{ hero.hero(pageTitle, "is-info", crumb, crumbSlug) }}
+    <section class="section">
+
+        <article class="content">
+            <h2>Upcoming Events and Reunions</h2>
+            <p>Please keep your information with the Alumni Assocation updated to keep in touch for upcoming events!</p>
+            <p>If your class would like help in planning a reunion, just contact us at <a href="mailto:info@ferncreekalumni.com">info@ferncreekalumni.com</a> or call <a href="tel:5028884583">502-888-4583</a>.</p>
+            <p>We can help you get the word out through e-mailings and Facebook posts. We also have banners that we can lend. We only have a limited number so it is first come first served.</p>
+        </article>
+    </section>
+{% endblock %}

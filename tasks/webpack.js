@@ -40,7 +40,11 @@ const webpackConfig = {
             use: {
                loader: "babel-loader"
             }
-         }
+         },
+         {
+            test: /\.(sass|css)$/,
+            loaders: ['style-loader', 'css-loader']
+          }
       ]
    }
 };

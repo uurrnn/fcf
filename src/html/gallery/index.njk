@@ -1,0 +1,25 @@
+{% set pageTitle = 'Gallery' %}
+
+{% extends '_layouts/default.njk' %}
+
+{% import '_macros/hero.njk' as hero %}
+
+{% block main %}
+    {{ hero.hero(pageTitle, "is-danger") }}
+    <section class="section">
+        <article class="content">
+            <p>Enjoy all of our pictures from the myriad of events and reunions we have put on over the years. Press a button below to filter the images based on the tag in the button. Click on any picture see a larger version, if available.</p>
+        </article>
+        <div id="galleryFilters" class="gallery-filters">
+            <span class="button">Event</span>
+            <span class="button">Reunion</span>
+            <span class="button">2013</span>
+            <span class="button">2015</span>
+            <span class="button">2016</span>
+            <span class="button">2017</span>
+            <span class="button">2018</span>
+            <span class="button">2019</span>
+        </div>
+        <div id="gallery" class="gallery columns is-mobile is-multiline is-centered"></div>
+    </section>
+{% endblock %}

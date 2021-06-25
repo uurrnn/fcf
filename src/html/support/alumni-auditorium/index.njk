@@ -1,0 +1,37 @@
+{% set pageTitle = "Alumni Auditorium" %}
+{% set crumb = 'Support' %}
+
+{% extends '_layouts/default.njk' %}
+
+{% import '_macros/hero.njk' as hero %}
+
+{% block main %}
+    {{ hero.hero(pageTitle, "is-success", crumb) }}
+    <section class="section">
+
+        <article class="content">
+            <h2>Alumni Auditorium Seats</h2>
+
+            <p>We continue to sell seat adoptions for $100 each. We provided funds for the renovation of the room a few years ago and will be making other contributions soon for additional upgrades. About 30% of the seats have been adopted to date. We have placed tags on the back of each seat that was adopted listing the name of the donor/donors and the person/persons the seat was adopted to honor or remember. Seats have been adopted for loved ones, teachers, administrators, parents and coaches. Consider adopting a seat today with your tax-deductible gift. Please send a check today to:</p>
+
+            <p>
+                Fern Creek High School Alumni Association<br>
+                P.O. Box 91266<br>
+                Louisville, KY 40291
+            </p>
+
+            <div class="columns">
+                <div class="column">
+                    <img src="/images/seat-arnold-niman.jpg" alt="Auditorium seat plaque"/>
+                </div>
+                <div class="column">
+                    <img src="/images/seat-dorwart-dorwart.jpg" alt="Auditorium seat plaque"/>
+                </div>
+                <div class="column">
+                    <img src="/images/seat-potter-potter.jpg" alt="Auditorium seat plaque"/>
+                </div>
+            </div>
+
+        </article>
+    </section>
+{% endblock %}

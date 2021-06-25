@@ -1,17 +1,148 @@
 {% set pageTitle = "Home" %}
 
-{% extends '_layouts/default.njk' %} 
+{% extends '_layouts/default.njk' %}
 
 {% block main %}
-<section class="container">
+    {# slider #}
+    {% 
+        set slides = [
+            {
+                link: "/gallery",
+                image: "hall-of-fame.jpg",
+                alt: "Hall of Fame members",
+                text: "Fern Creek High School Hall of Fame"
+            },
+            {
+                link: "/reunions",
+                image: "reunions.jpg",
+                alt: "'61 Reunion",
+                text: "Fern Creek 1961 Reunion",
+                textClass: "lower"
+            },
+            {
+                link: "/gallery",
+                image: "students-now-and-then.jpg",
+                alt: "Students Now and Then",
+                text: "Students Now and Then",
+                textClass: "lower"
+            }
+        ]
+    %}
+        <!-- Slider main container -->
+        <section class="slider swiper-container">
+            <div class="swiper-wrapper">
+                {% for slide in slides %}
+                    <div class="swiper-slide is-flex is-justify-content-center">
+                        {% if slide.text %}
+                            <a href="{{link}}" class="slide-text {{ slide.textClass if slide.textClass else ''}}">{{slide.text}}</a>
+                        {% endif %}
+                        <img src="/images/slider/{{slide.image}}" alt="{{slide.alt}}"/>
+                    </div>
+                {% endfor %}
+            </div>
 
-<h2>Cras eget consequat enim
-    </h2>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </section>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu elit id ligula convallis tempor. Sed sapien odio, vehicula non vehicula vitae, volutpat non ante. Cras mattis aliquam turpis, sed vulputate dui pharetra id. Etiam vitae tellus at nulla rhoncus hendrerit tristique at nisl. Aliquam suscipit auctor magna sed consectetur. Nullam fermentum ex a nunc mollis molestie. Phasellus pretium lacus nec rhoncus venenatis. Nam a est eu leo ornare ornare quis in quam.</p>
+    {# quote #}
+    <section class="section">
+        <div class="columns is-vcentered is-centered">
+            <div class="column is-3-tablet has-text-centered">
+                <img src="/images/crest.png" alt="Fern Creek Crest"/>
+            </div>
+            <div class="column is-size-5 is-9-tablet is-8-desktop is-7-widescreen has-text-centered">
+                <p>A <strong>tradition</strong> unlike any other school in Louisville.<br>
+                Keep in touch and help us celebrate <strong>Fern Creek</strong> as a community
+                meeting place, a hub of learning and a touchstone for
+                    <strong>generations</strong> of Louisville residents.</p>
+            </div>
+        </div>
+    </section>
 
-    <p>In turpis enim, consectetur a tempus ac, varius sed mauris. Aenean dignissim velit sit amet finibus fermentum. Sed sagittis augue et magna lobortis cursus. Aenean tempus gravida tempus. Nam nunc metus, varius sit amet bibendum eu, posuere id est. Integer euismod libero id risus condimentum rutrum. Vestibulum lobortis gravida est, et tincidunt arcu hendrerit condimentum. Nulla accumsan odio dui, at imperdiet mi feugiat quis. Curabitur hendrerit mi nibh, a ultricies sapien feugiat a. Ut sodales lorem ut justo tempor tempor. Donec fermentum facilisis malesuada. Etiam et blandit risus. Nam vestibulum augue felis, ultricies laoreet mi tempus in. Cras ac mi tortor. Vivamus nec leo vel odio tincidunt congue.</p>
+    {# news #}
+    <section class="section">
+        <div class="columns is-8 is-variable is-centered is-vcentered">
+            <div class="column is-5-desktop">
+                <div class="news-card">
+                    <h3>HOMECOMING 2021 – October 1, 2021</h3>
+                    <p>Tentatively, October 1, 2021 has been set to celebrate FCHS alumni homecoming. We will select candidates for the class of 2021 Hall of Fame and they will be inducted with the class of 2020.</p>
+                    <a class="btn-text" href="/calendar">Read More</a>
+                </div>
+            </div>
+            <div class="column is-5-desktop">
+                <div class="news-card">
+                    <h3>Ivy Plus Academy</h3>
+                    <p>Fern Creek High School Ivy Plus Academy The lvy Plus Academy’s purpose is to ensure students’ acceptance into the nation’s most selective colleges and universities. lvy Plus Academy students will travel as a cohort in ...</p>
+                    <a class="btn-text" href="/about/ivyplus">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <p>Nullam sit amet felis non ligula malesuada volutpat. Aliquam erat volutpat. Integer venenatis nulla sed ante lacinia, ut faucibus metus blandit. Vestibulum sed magna condimentum urna consequat lacinia ac at sem. Sed sed tristique tellus. Nulla facilisi. Sed fringilla, mi eu iaculis auctor, elit augue porttitor enim, rutrum auctor neque elit nec sem. In pulvinar lacus at egestas cursus. In vitae metus lacinia, vulputate metus eget, porta purus. Phasellus sollicitudin laoreet vehicula.</p>
-</section>
+    {# gallery #}
+    {% set thumbs = [
+        { url: 'home-1' },
+        { url: 'home-2' },
+        { url: 'home-3' },
+        { url: 'home-4' },
+        { url: 'home-5' },
+        { url: 'home-6' },
+        { url: 'home-7' }
+    ]
+ %}
+
+    <section class="section">
+        <h3 class="mb-4 is-size-4 has-text-black is-uppercase has-text-weight-bold has-text-centered">Check out our gallery here</h3>
+        <div class="columns is-multiline is-mobile has-text-centered">
+            {% for thumb in thumbs %}
+                <div class="column is-half-mobile">
+                    <a href="/gallery">
+                        <img class="hoverBreathe rounded-15" src="/images/gallery/home/{{thumb.url}}.jpg" alt="View our gallery"/>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    {# cards #}
+    {%
+        set cards = [
+            {
+                name: "events",
+                link: "/events-and-reunions/events",
+                blurb: "Keep up with all of our exciting events throughout the upcoming year",
+                icon: "calendar-alt"
+            },
+            {
+                name: "reunions",
+                link: "/events-and-reunions/reunions",
+                blurb: "Help plan a reunion for your class or checkout some of our past ones.",
+                icon: "glass-cheers"
+            },
+            {
+                name: "members",
+                link: "https://members.ferncreekalumni.com/",
+                blurb: "You can log in to the member site here or sign up if you haven’t yet.",
+                icon: "users"
+            },
+            {
+                name: "give",
+                link: "/support/membership/",
+                blurb: "Ways to give and support the Fern Creek Alumni Association.",
+                icon: "hand-holding-heart"
+            }
+        ]
+    %}
+    <section class="section">
+        <div class="homecards">
+        {% for card in cards %}
+            <a href="{{card.link}}" class="home-card">
+                <h4>{{card.name}}</h4>
+                <p>{{card.blurb}}</p>
+                <i class="fas fa-{{card.icon}}"></i>
+            </a>
+        {% endfor %}
+        </div>
+    </section>
 {% endblock %}

@@ -6,81 +6,79 @@
         },
         {
             name: "About",
-            link: "/about"
+            link: "/about",
             subNavItems: [
                 {
                     name: "Board",
-                    link: "/board"
+                    link: "/about/board"
                 },
                 {
                     name: "Financial Review",
-                    link: "/financial-review"
+                    link: "/about/financial-review"
                 },
                 {
                     name: "Newsletters",
-                    link: "/newsletters"
+                    link: "/about/newsletters"
                 },
                 {
                     name: "Ivy Plus Academy",
-                    link: "/ivyplus"
+                    link: "/about/ivyplus"
                 }
             ]
         },
         {
             name: "Events",
-            link: "/events"
+            link: "/events-and-reunions",
             subNavItems: [
                 {
                     name: "Class Events",
-                    link: "/events"
+                    link: "/events-and-reunions/events"
                 },
                 {
                     name: "Class Reunions",
-                    link: "/reunions"
-                },
-                {
-                    name: "60's Proud Reunion",
-                    link: "/60s-proud"
+                    link: "/events-and-reunions/reunions"
                 },
                 {
                     name: "Hall of Fame",
-                    link: "/hall-of-fame"
+                    link: "/events-and-reunions/hall-of-fame"
                 },
                 {
                     name: "Alumni Band",
-                    link: "/alumni-band"
+                    link: "/events-and-reunions/alumni-band"
                 },
                 {
                     name: "Calendar",
-                    link: "/calendar"
+                    link: "/events-and-reunions/calendar"
                 }
             ]
         },
         {
             name: "Support",
-            link: "/support"
+            link: "/support",
             subNavItems: [
                 {
                     name: "Alumni Association Membership",
-                    link: "/membership"
+                    link: "/support/membership"
                 },
                 {
                     name: "Ways to Give",
-                    link: "/give"
+                    link: "members.ferncreekalumni.com/membership-options",
+                    target: "_blank"
                 },
                 {
                     name: "Alumni Auditorium",
-                    link: "/alumni-auditorium"
+                    link: "/support/alumni-auditorium"
                 },
                 {
                     name: "Fundraising Events",
-                    link: "/fundraising"
+                    link: "/support/fundraising"
                 }
             ]
         },
         {
             name: "Members",
-            link: "#"
+            link: "https://members.ferncreekalumni.com/",
+            target: "_blank"
         },
         {
             name: "Gallery",
@@ -91,7 +89,7 @@
 
 <header class="header" role="banner">
     <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="container">
+    <div class="container is-max-widescreen">
         <div class="navbar-brand">
             <a class="navbar-item" href="/">
                 <img src="/images/logo.png" alt="Fern Creek Alumni Logo">
@@ -113,12 +111,16 @@
                             <a href={{item.link}} class="navbar-link is-arrowless">{{item.name}}</a>
                             <div class="navbar-dropdown">
                                 {% for subItem in item.subNavItems %}
-                                    <a href={{subItem.link}} class="navbar-item">{{subItem.nam}}</a>
+                                    <a href={{subItem.link}} class="navbar-item">{{subItem.name}}</a>
                                 {% endfor %}
                             </div>
                         </div>
                     {% else %}
-                        <a href={{item.link}} class="navbar-item">{{item.name}}</a>
+                        {% if item.target %}
+                            <a href={{item.link}} target={{item.target}} class="navbar-item">{{item.name}}</a>
+                        {% else %}
+                            <a href={{item.link}} class="navbar-item">{{item.name}}</a>
+                        {% endif %}
                     {% endif %}
                 {% endfor %}
 

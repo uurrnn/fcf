@@ -5,10 +5,28 @@
 @import "variables";
 
 @import "../../node_modules/bulma/bulma";
-@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
-@import "../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
-@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "../../node_modules/basiclightbox/src/styles/main";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/brands";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
 
+@import "components/breadcrumbs";
+@import "components/buttons";
+@import "components/cards";
+@import "components/gallery";
 @import "components/header";
 @import "components/footer";
+@import "components/slider";
 @import "components/video";
+
+@import "utility/animations";
+@import "utility/misc";
+
+body,
+html {
+    overflow-x: hidden;
+}
+// keeps all pages tall enough to fill the viewport
+main.container {
+    min-height: 70vh;
+}

@@ -1,0 +1,47 @@
+.slider {
+    margin-top: 2.5rem;
+
+    img {
+        max-width: 1000px;
+    }
+
+    .swiper-slide {
+        overflow: hidden;
+    }
+    
+    .slide-text {
+        background: rgba($black, .75);
+        color: $white;
+        text-transform: uppercase;
+        font-size: 2rem;
+        padding: 25px 35px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-66%);
+        will-change: padding, color;
+        transition: padding 550ms, color 550ms;
+
+        &.lower {
+            transform: translateY(50%);
+        }
+
+        @include breakpoint(1216px) {
+            left: 76px;// magic number to set banner on left edge of 1000px wide slider image
+        }
+
+        &:hover {
+            background: rgba($orange, .75);
+            color: $black;
+            padding: 25px 85px;
+        }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: $white;
+
+        @include breakpoint(1024px) {
+            color: $black;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{% set pageTitle = "Board of Directors" %}
+{% set crumb = 'About' %}
+
+{% import '_macros/hero.njk' as hero %}
+
+{% extends '_layouts/default.njk' %}
+
+{% block main %}
+    {{ hero.hero(pageTitle, "is-dark", crumb) }}
+    <section class="section">
+        <img class="block" src="/images/FCAA-2019-Board.jpg" alt="The Board of Directors"/>
+        <article class="content">
+            <p>
+                <strong>Front Row:</strong> Joey Bailey, Ex Dir, Jeanne Newman, Sec’y,  Paula Williams Schneider, Rev Debby Murrell, Nancy Dreher, Dr. Rebecca Nicolas, Principal</p>
+            <p>
+                <strong>Middle row:</strong> Noel Thompson (resigned), Skipper Martin, Stephan Johnson, Dr Matt Howard, Austin Byers, Treasurer
+</p>
+            <p>
+                <strong>Back Row:</strong> Rick Smith (resigned), Dr. David Vaughn, David Stout,  Rev. Dr. Michael Gatton, Chair
+</p>
+            <p>
+                <strong>Absent: </strong>Evelyn Vaughn, Vice-Chair, Melissa  Box, Dr. Marguerite Burch and Kenny Frick
+</p>
+            <p>
+General Alumni meetings are held at 7 PM in the Ramsey Room on the 3rd Monday of February, April, August, September and November. Meetings in person are suspended until further notice due to Covid 19.
+</p>
+            <p>
+To Nominate someone to join the Board for a 3 year term beginning in 2022, fill in the Board Nomination Form and email it to <a href="mailto:info@ferncreekalumni.com">info@ferncreekalumni.com</a> by Nov. 1st, 2021</p>
+        </article>
+    </section>
+{% endblock %}

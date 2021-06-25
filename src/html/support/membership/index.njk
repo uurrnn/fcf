@@ -1,0 +1,44 @@
+{% set pageTitle = "Alumni Association Membership" %}
+{% set crumb = 'Support' %}
+
+{% extends '_layouts/default.njk' %}
+
+{% import '_macros/hero.njk' as hero %}
+
+{% block main %}
+    {{ hero.hero(pageTitle, "is-success", crumb) }}
+    <section class="section">
+
+        <article class="content">
+            <h2>Tigers Stand Together!</h2>
+
+            <p>Greetings from the Fern Creek High School Alumni Association Board</p>
+
+            <h4>
+                <a href="/docs/pdfs/fchs-joining.pdf" target="_blank">Membership Form</a>
+            </h4>
+
+            <p>
+                For more information:<br>
+                Call the Alumni Office <a href="tel:5028884583">(502-888-4583)</a> and leave your name and contact information or email <a href="mailto:events@ferncreekalumni.com">events@ferncreekalumni.com</a>
+            </p>
+
+            <p>Welcome to the Fern Creek High School Alumni Association</p>
+
+            <p>No one knows what a special place Fern Creek is better than its former students. The Fern Creek High School Alumni Association is one of the strongest and most active alumni organizations for a public high school in the country.</p>
+
+            <p>We have more than 15,000 alumni and many of them are dues-paying members of the Alumni Association. This loyal and active group has given more than $1.8 million to support the school with everything from student and teacher scholarships, to the ACT Up! program to prepare students for college testing, to funding a Guitar and Piano Lab for our music program. The Alumni Association hosts a variety of events each year such as the Fifties Club lunch, an all-class reunion barbeque, the Alumni Breakfast and the Hall of Fame Lunch during Homecoming, and much more.</p>
+
+            <p>If you attended Fern Creek High School, we encourage you to get involved. Help us help our students... and have a lot of fun remembering your days at the Creek!</p>
+
+            <p>Become a member via <a href="//members.ferncreekalumni.com" target="_blank">members.ferncreekalumni.com</a> and navigate to the Membership Options Page to support the Fern Creek Alumni's mission</p>
+
+            <p>
+                <strong>Free membership:</strong> * receive biannual email newsletter * receive news announcements and alerts * see online event calendar * limited access to online yearbooks</p>
+
+            <p>
+                <strong>Paid membership:</strong> Ability to connect with classmates * birthday and marital status! * Access a full list of group members and their contact information! * Ability to add your own photos to the 'Memories' gallery</p>
+
+        </article>
+    </section>
+{% endblock %}

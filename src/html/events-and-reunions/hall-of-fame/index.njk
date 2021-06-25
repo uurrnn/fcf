@@ -1,0 +1,596 @@
+{% set pageTitle = "Hall of Fame" %}
+{% set crumb = 'Events and Reunions' %}
+{% set crumbSlug = 'events-and-reunions' %}
+
+{% extends '_layouts/default.njk' %}
+
+{% import '_macros/hero.njk' as hero %}
+
+{% block main %}
+    {{ hero.hero(pageTitle, "is-info", crumb, crumbSlug) }}
+    <section class="section">
+        <article class="content">
+
+            <h3>
+                Our Hall of Fame Induction Ceremony and Luncheon was held<br>
+                Sunday September 27, 2015 at Wildwood Country Club<br>
+                8 new members (and a baseball team) were inducted.<br>
+                Areas of achievement which were considered:
+            </h3>
+            <ul>
+                <li >Overall career success</li>
+                <li >Creative and Artistic Accomplishment</li>
+                <li >Civic and Community Involvement</li>
+                <li >Public Service for the Common Good</li>
+                <li >Athletic achievement while a student</li>
+            </ul>
+            <p>
+                <strong>1965 Baseball Team Induction</strong>
+            </p>
+            <p>Acceptance Speech by Austin Byers:</p>
+            <blockquote>
+                Thank you for recognizing this significant achievement of the 1964-65 “Creekers” baseball team. We are grateful for this induction into the FCHS Hall of Fame. I have such great memories of this baseball team and our great season and talking with these guys the past two days I see they do too.<br><br>
+                I remember:<br>
+                - The trips for A&amp;W root beer after wins.<br>
+                - Having to drive, or get a ride, to the away games – no team bus.<br>
+                - The excitement we all felt during the three no-hitters pitched by Tony Murphy and Bob Dorwart.<br>
+                - The magic run of seven straight tournament wins.<br>
+                - The “agony of defeat” in the final game. We were “this close!” Possibly one play difference.<br>
+                - We played “small ball.” I remember the squeeze bunts, stolen bases and mostly walks, singles and occasional double that characterized our team. We usually beat teams by superior pitching and manufacturing runs, not slugging. (The one exception may have been Bill Devine’s awesome – bases loaded – triple against Flaget in the opening regional game.)<br>
+                - Finally, and maybe most importantly, I remember a team “heart” that exhibited “we don’t quit, we don’t ever give up.” When Joey Bailey broke his finger playing shortstop, he didn’t back off – he found a way to continue playing center field and was named “all region” in that position. Jerry Quinlan moved to shortstop and the team continued on.<br><br>
+                What a magical season it was!<br>
+                It is with great pride that I introduce the members of the 1965 State Runner-up team. Unfortunately, six of our members on this plaque, are deceased. Coach Bill Houchin, Bob Dorwart, Randall Lewis, Ronnie Stone, Calvin Davis, and Bill Duncan. We remember them today also.<br>
+                Here today (please stand and remain standing ) are: Joey Bailey, Austin Byers, Bill Devine, John Eisert, Milton Hughes, Fred Lantz, Tony Murphy, Fred Plahuta, Jerry Quinlan, Keith Thompson and Noel Thompson.<br>
+                Ken Keeling, Leslie Lovett, Paul Newton, Mike Hernandez, Don Beningfield, and Tommy Keene could not make it this week-end.
+            </blockquote>
+
+            <h3>Want to Nominate Someone?</h3>
+
+            <p>2021 Hall of Fame Nominations must to be submitted by 6/30/2021. Inductees will be honored at the 2021 luncheon. There was no induction in 2020 due to the pandemic so the 20 and 21 classes will be recognized on October 3, 2021.</p>
+            <p>
+                <strong>Up to 10 new members will be inducted. Areas considered are:</strong>
+            </p>
+            <ul>
+                <li>Overall career success</li>
+                <li>Creative and Artistic Accomplishment</li>
+                <li>Civic and Community Involvement</li>
+                <li>Public Service for the Common Good</li>
+                <li>Athletic achievement while a student</li>
+            </ul>
+            <p>
+                <strong>Use the form below to nominate an outstanding Alumnus 35 years of age or older who meets the following requirements:</strong>
+            </p>
+            <ul>
+                <li>Achieved outstanding success in his/her field of endeavor</li>
+                <li>Extraordinary achievement in terms of professional honors and awards in his/her chosen field or accomplishment by any measure appropriate to that career.</li>
+                <li>Serves as a positive role model and a good ambassador for Fern Creek High School with his/her accomplishments.</li>
+                <li>Excellence while a student at Fern Creek High School as a member of an athletic team, club or activity (minimum age requirement waived for this criteria, however, the nomination must occur at least five years after graduation).</li>
+            </ul>
+
+            <p>A deceased alumnus meeting above criteria may also be nominated.</p>
+
+            <p>
+                <a href="/docs/pdfs/HOF-new-nomination-form-2020.pdf" target="_blank">HOF new nomination form 2021</a>
+            </p>
+
+            <p>The Hall of Fame Selection committee shall consist of three members of the Alumni Association Board of Directors, two at-large Alumni Association members, the Athletic Director and the Principal. The nomination will remain active for up to five years if not selected in the current class of inductees.</p>
+
+            <h3>Hall of Fame Inductees</h3>
+
+            {# hof inductees data #}
+            {%
+                set hofYear = [
+                    {
+                        year: '2014',
+                        inductees: [{
+                            name: 'Marjorie Billker Graves',
+                            year: '65'
+                            },{
+                            name: 'Dr. Arnold Friedman',
+                            year: '60'
+                            },{
+                            name: 'J. D. Nichols',
+                            year: '60'
+                        }]
+                    },
+                    {
+                        year: '2013',
+                        inductees: [
+                            {
+                            name: 'Dr. Robert E. Arnold',
+                            year: '49'
+                            },{
+                            name: 'Jerry T. Blacketer',
+                            year: '65'
+                            },{
+                            name: 'James Lindsey',
+                            year: '60'
+                            },{
+                            name: 'Rep. Addia K. Cartwright-Wuchner',
+                            year: '73'
+                        }]
+                    },
+                    {
+                        year: '2012',
+                        inductees: [
+                            {
+                            name: 'Stacy Gwynn',
+                            year: '82'
+                            },{
+                            name: 'Dr. G. Matt Howard, III',
+                            year: '62'
+                            },{
+                            name: 'Steve Leslie',
+                            year: '76'
+                            },{
+                            name: 'David Webber',
+                            year: '77'
+                            },{
+                            name: 'Gary Yurt',
+                            year: '87'
+                            }
+                        ]
+                    },
+                    {
+                        year: '2011',
+                        inductees: [{
+                            name: 'Robbie Bartlett',
+                            year: '77'
+                            },{
+                            name: 'Stephan Johnson ',
+                            year: '88'
+                            },{
+                            name: 'William D. Probus',
+                            year: '61'
+                        },{
+                            name: 'Dr. James Svara',
+                            year: '61'
+                        }, {
+                            name: 'Noel Thompson',
+                            year: '65'
+                        }
+                        ]
+                    },
+                    {
+                        year: '2010',
+                        inductees: [
+                            {
+                            name: 'Nevette Johnston',
+                            year: '64'
+                            },{
+                            name: 'Don McKay',
+                            year: '60'
+                            },{
+                            name: 'David Puckett',
+                            year: '65'
+                            },{
+                            name: 'J. David Quisenberry ',
+                            year: '60'
+                            }
+                        ]
+                    },
+                    {
+                        year: '2009',
+                       inductees: [
+                            {
+                            name: 'Robert W. Chambers',
+                            year: '70'
+                            },{
+                            name: 'Don Espy',
+                            year: '60'
+                            },{
+                            name: 'Jane Bailey Flanigan',
+                            year: '53'
+                            },{
+                            name: 'Rev. Dr. Michael A. Gatton',
+                            year: '68'
+                            },{
+                            name: 'Shere Powers Koppel',
+                            year: '68'
+                            },{
+                            name: 'Dr. Louis B. Nagel',
+                            year: '60'
+                            },{
+                            name: 'Paul Jerry Smith',
+                            year: '78'
+                            },{
+                            name: 'Rick Smith',
+                            year: '85'
+                            },{
+                            name: 'James L. Sullins',
+                            year: '60'
+                            },{
+                            name: 'Dennis P. Thompson',
+                            year: '56'
+                            }
+                        ]
+                    },
+                    {
+                        year: '2008',
+                        inductees: [
+                            {
+                            name: 'George Brangers',
+                            year: '56'
+                            },{
+                            name: 'Shirley Bleemel Brangers',
+                            year: '56'
+                            },{
+                            name: 'Randy S. Coulter',
+                            year: '87'
+                            },{
+                            name: 'Michael F. Eubanks',
+                            year: '72'
+                            },{
+                            name: 'Jacque Lee Hill Hardin',
+                            year: '59'
+                            },{
+                            name: 'Richard Isgrigg',
+                            year: '55'
+                            },{
+                            name: 'Andrew ‘Skipper’ Martin',
+                            year: '62'
+                            },{
+                            name: 'Eleanor M. Porter Pershing',
+                            year: '58'
+                            },{
+                            name: 'Mabel Ruth Riley Weatherford',
+                            year: '44'
+                            }
+                        ]
+                    },
+                    {
+                        year: '2007',
+                        inductees: [
+                            {
+                            name: 'Peter C. L. Boyce',
+                            year: '60'
+                            },{
+                            name: 'Mary Jeanne Fisher Fletcher',
+                            year: '54'
+                            },{
+                            name: 'James Guffey',
+                            year: '57'
+                            },{
+                            name: 'Dr. Roger Hoagland',
+                            year: '72'
+                            },{
+                            name: 'Donald Pierce',
+                            year: '60'
+                            },{
+                            name: 'Dr. Bob Rodgers',
+                            year: '60'
+                            },{
+                            name: 'Donald R. Stout',
+                            year: '49'
+                            }
+                        ]
+                    },
+                    {
+                        year: '2006',
+                        inductees: [
+                            {
+                            name: 'Clinton C. Cook, III, M.D.',
+                            year: '57'
+                            },{
+                            name: 'Dr. John H. ‘Jack’ Frick',
+                            year: '60'
+                            },{
+                            name: 'Lt. Col. Jon T. Little',
+                            year: '60'
+                            },{
+                            name: 'Lynda Leslie Pulliam',
+                            year: '59'
+                            },{
+                            name: 'Ross Simpson',
+                            year: '60'
+                            },{
+                            name: 'Rhonda Lusk Tully',
+                            year: '71'
+                            }
+                        ]
+                    },
+                    {
+                        year: '2005',
+                        inductees: [
+                            {
+                            name: 'William S. Anderson',
+                            year: '52'
+                            },{
+                            name: 'James N. Birch',
+                            year: '56'
+                            },{
+                            name: 'James Allen Blacketer',
+                            year: '57'
+                            },{
+                            name: 'James W. Fegenbush, Jr.',
+                            year: '64'
+                            },{
+                            name: 'Dr. Ralph Luker',
+                            year: '58'
+                            },{
+                            name: 'Harold Peak',
+                            year: '51'
+                            },{
+                            name: 'Michael T. Peavler',
+                            year: '85'
+                            },{
+                            name: 'Rev. Dr. Walter L. Porter',
+                            year: '55'
+                            },{
+                            name: 'Jeffrey Ratanapool',
+                            year: '88'
+                            },{
+                            name: 'Kathryn Badgett Rogers',
+                            year: '41'
+                            },{
+                            name: 'Daniel S. Rush, M.D.',
+                            year: '67'
+                            },{
+                            name: 'Neil C. Rush, D.M.D.',
+                            year: '68'
+                            },{
+                            name: 'Ruth Evelyn Wise Ruter',
+                            year: '40'
+                            },{
+                            name: 'Deborah Chambers White',
+                            year: '73'
+                            },{
+                            name: 'Donald L. Williams',
+                            year: '53'
+                            },{
+                            name: 'Keith E. Williams',
+                            year: '75'
+                            },{
+                            name: 'John J. Wingfield',
+                            year: '64'
+                            }
+                        ]
+                    },
+                    {
+                        year: '2004',
+                        inductees: [
+                            {
+                            name: 'Dr. Marillene A. Allen',
+                            year: '59'
+                            },{
+                            name: 'Gary Daniel',
+                            year: '57'
+                            },{
+                            name: 'Sam Moody',
+                            year: '63'
+                            },{
+                            name: 'Dr. David W. Vaughn',
+                            year: '55'
+                            },{
+                            name: 'Curtis Warfield',
+                            year: '86'
+                            }
+                        ]
+                    },
+                    {
+                        year: '2003',
+                        inductees: [
+                            {
+                            name: 'Sidney J. Anderson',
+                            year: '57'
+                            },{
+                            name: 'Larry D. Hamfeldt',
+                            year: '59'
+                            },{
+                            name: 'James Guffey',
+                            year: '66'
+                            },{
+                            name: 'Patricia A. Burch Jacobs',
+                            year: '71'
+                            },{
+                            name: 'Maurice D. Risner',
+                            year: '66'
+                            },{
+                            name: 'Edward S. Stokes, Jr.',
+                            year: '42'
+                            },{
+                            name: 'William Stokes, D.V.M.',
+                            year: '70'
+                            }
+                        ]
+                    },
+                    {
+                        year: '2002',
+                        inductees: [
+                            {
+                            name: 'Daniel Lee Arnold',
+                            year: '76'
+                            },{
+                            name: 'Robert A. Dorwart',
+                            year: '65'
+                            },{
+                            name: 'Kenneth W. Frick',
+                            year: '61'
+                            },{
+                            name: 'Gerald R. Kaufman',
+                            year: '65'
+                            },{
+                            name: 'Walden L. S. Laukhuf',
+                            year: '61'
+                            },{
+                            name: 'Lenora J. Roberts adopted',
+                            year: '98'
+                            }
+                        ]
+                       },
+                    
+                    {
+                        year: '2001',
+                        inductees: [
+                            {
+                            name: 'Joey Bailey',
+                            year: '65'
+                            },{
+                            name: 'Edgar Carlos Barratt',
+                            year: '40'
+                            },{
+                            name: 'R. Ted Boehm adopted',
+                            year: '98'
+                            },{
+                            name: 'Tito Castillo adopted',
+                            year: '98'
+                            },{
+                            name: 'Raymond Cope adopted',
+                            year: '99'
+                            },{
+                            name: 'Freida K. Eggleton',
+                            year: '70'
+                            },{
+                            name: 'Kenneth Blair Farmer',
+                            year: '34'
+                            },{
+                            name: 'Charles M. Kramer',
+                            year: '55'
+                            },{
+                            name: 'Brig. Gen. Michael A. Kuehr',
+                            year: '66'
+                            },{
+                            name: 'Tommy W. Mobley',
+                            year: '67'
+                            },{
+                            name: 'Rev. Deborah Anne Murrell',
+                            year: '60'
+                            },{
+                            name: 'Brian K. Newman',
+                            year: '79'
+                            },{
+                            name: 'Kathy Vaughn Zwanzig',
+                            year: '72'
+                            }
+                        ]
+                    },
+                    {
+                        year: '2000',
+                        inductees: [
+                            {
+                            name: 'Iris Arnold',
+                            year: '46'
+                            },{
+                            name: 'Garland S. Cochrane',
+                            year: '32'
+                            },{
+                            name: 'Louisa Henson-Mussler',
+                            year: '66'
+                            },{
+                            name: 'Troy Lovett adopted',
+                            year: '99'
+                            },{
+                            name: 'Everett N. Rush, Jr.',
+                            year: '40'
+                            },{
+                            name: 'Evelyn Yancey Vaughn',
+                            year: '58'
+                            }
+                        ]
+                    },
+                    {
+                        year: '1999',
+                        inductees: [
+                            {
+                            name: 'Ken Arnold adopted',
+                            year: '98'
+                            },{
+                            name: 'Paul Bates',
+                            year: '29'
+                            },{
+                            name: 'Dr. Fred Coy, Jr.',
+                            year: '42'
+                            },{
+                            name: 'Jimmy Fox',
+                            year: '38'
+                            },{
+                            name: 'Beatrice Hood',
+                            year: '66'
+                            },{
+                            name: 'Arthur D. Mattingly',
+                            year: '32'
+                            },{
+                            name: 'Marion C. Moore adopted',
+                            year: '99'
+                            },{
+                            name: 'Dr. Clyde Moore',
+                            year: '39'
+                            },{
+                            name: 'James Ward, Sr.',
+                            year: '50'
+                            },{
+                            name: 'Ben Williams, Jr.',
+                            year: '32'
+                            }
+                        ]
+                    },
+                    {
+                        year: '1998',
+                        inductees: [
+                            {
+                            name: 'Dr. Barbara Dowe Bailey',
+                            year: '68'
+                            },{
+                            name: 'Dr. Emily Surgenor Childers',
+                            year: '54'
+                            },{
+                            name: 'James Farmer',
+                            year: '30'
+                            },{
+                            name: 'Dr. Harold Haller, Sr.',
+                            year: '49'
+                            },{
+                            name: 'Dr. George Howard adopted',
+                            year: '98'
+                            },{
+                            name: 'Ennis Johnson',
+                            year: '27'
+                            },{
+                            name: 'Ruthe Chambers Lusk',
+                            year: '52'
+                            },{
+                            name: 'S. Rush Nicholson',
+                            year: '32'
+                            },{
+                            name: 'Willis K. Niman adopted',
+                            year: '98'
+                            },{
+                            name: 'John Ramsey',
+                            year: '36'
+                            },{
+                            name: 'Dr. James Ramsey',
+                            year: '66'
+                            },{
+                            name: 'Marshall L. Roberts',
+                            year: '56'
+                            },{
+                            name: 'Michael Stewart',
+                            year: '59'
+                            },{
+                            name: 'Gregory Stickler',
+                            year: '76'
+                            },{
+                            name: 'Dr. Larry Tyler',
+                            year: '57'
+                            }
+                        ]
+                    }
+                ]
+            %}
+
+            <div class="columns is-multiline">
+                {% for year in hofYear %}
+
+                    <div class="column is-6-mobile is-4-tablet">
+                        <h5>{{year.year}}</h5>
+                        {% for inductee in year.inductees %}
+                            <p>{{inductee.name}} &lsquo;{{inductee.year}}</p>
+                        {% endfor %}
+                    </div>
+
+                {% endfor %}
+            </div>
+
+        </article>
+    </section>
+{% endblock %}

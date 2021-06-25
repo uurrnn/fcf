@@ -1,0 +1,9 @@
+.rounded-15 {
+    border-radius: 15px;
+}
+
+.hoverBreathe:hover {
+    animation-name: breathe;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}

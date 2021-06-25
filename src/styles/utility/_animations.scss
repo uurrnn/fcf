@@ -1,0 +1,31 @@
+@keyframes horizBounce {
+    0% {
+        transform: translate3d(20px, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(10px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(20px, 0, 0);
+    }
+}
+
+@keyframes breathe {
+    0% {
+        transform: scale(1);
+    }
+
+    40% {
+        transform: scale(1.1);
+    }
+
+    60% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,31 @@
+{% set pageTitle = "Alumni Band" %}
+{% set crumb = 'Events and Reuinons' %}
+{% set crumbSlug = 'events-and-reunions' %}
+
+{% extends '_layouts/default.njk' %}
+
+{% import '_macros/hero.njk' as hero %}
+
+{% block main %}
+   {{ hero.hero(pageTitle, "is-info", crumb, crumbSlug) }}
+    <section class="section">
+
+        <article class="content">
+            <p>This page will soon be filled with photos and info about the Band through the ages, and with updates from Band members old and new.</p>
+            <div class="columns is-multiline">
+
+                <div class='column is-3'>
+                    <img src="/images/photo-2-FC.jpg" alt="Alumni Band"/></div>
+                <div class='column is-3'>
+                    <img src="/images/photo-3-FC.jpg" alt="Alumni Band"/></div>
+                <div class='column is-3'>
+                    <img src="/images/photo-4-FC.jpg" alt="Alumni Band"/></div>
+                <div class='column is-3'>
+                    <img src="/images/photo-5-FC.jpg" alt="Alumni Band"/></div>
+                <div class='column is-3'>
+                    <img src="/images/1.jpg" alt="Alumni Band"/></div>
+            </div>
+
+        </article>
+    </section>
+{% endblock %}

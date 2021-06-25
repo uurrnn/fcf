@@ -1,0 +1,19 @@
+{% macro hero(pageTitle, color = null, crumb = null, crumbSlug = null) %}
+    <section class="hero {{ color if color }}">
+        <div class="hero-body">
+            <nav class="breadcrumb has-arrow-separator" aria-label="breadcrumbs">
+                <ul>
+                    {% if crumb %}
+                        <li>
+                            <a href="/{{ crumbSlug if crumbSlug else crumb }}/">{{crumb}}</a>
+                        </li>
+                    {% endif %}
+                    <li class="is-active">
+                        <a href="#" aria-current="page">{{pageTitle}}</a>
+                    </li>
+                </ul>
+            </nav>
+            <h1 class="title">{{pageTitle}}</h1>
+        </div>
+    </section>
+{% endmacro %}

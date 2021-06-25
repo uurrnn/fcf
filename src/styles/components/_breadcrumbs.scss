@@ -1,0 +1,30 @@
+.breadcrumb {
+    li {
+        & + li::before {
+            color: $white;
+        }
+        a {
+            background: $lightorange;
+            border-radius: 5px;
+            margin: 0 0.75rem;
+            color: $black;
+
+            &:hover {
+                background: $orange;
+            }
+        }
+
+        &.is-active {
+            a {
+                background: $text;
+            }
+        }
+
+        &:first-of-type {
+            a {
+                padding-left: 0.75rem; // bulma overwrite;
+                margin-left: 0;
+            }
+        }
+    }
+}

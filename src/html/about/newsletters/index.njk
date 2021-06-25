@@ -1,0 +1,45 @@
+{% set pageTitle = "Newsletters" %}
+{% set crumb = 'About' %}
+
+{% extends '_layouts/default.njk' %}
+
+{% import '_macros/hero.njk' as hero %}
+
+{% block main %}
+    {{ hero.hero(pageTitle, "is-dark", crumb) }}
+    <section class="section">
+        <article class="content">
+            <p>Check out our current newsletter here &mdash;  <a href="/docs/newsletter/Winter-2020-Newsletter.pdf" target="_blank">January 2020 Newsletter</a>
+                <p>
+                    <a href="/docs/newsletter/Aug-2019-Newsletter" target="_blank">August 2019 Newsletter</a>
+                </p>
+                <p>
+                    <a href="/docs/newsletter/Spring-2019-Alumni-Newsletter" target="_blank">January 2019 Newsletter</a>
+                </p>
+                <p>
+                    <a href="/docs/newsletter/Aug-2018.pdf" target="_blank">August 2018 Newsletter</a>
+                </p>
+                <p>
+                    <a href="/docs/newsletter/Spring-2018-Newsletter.pdf" target="_blank">January 2018 Newsletter</a>
+                </p>
+                <p>
+                    <a href="/docs/newsletter/Jan-2017-FCAA-Newsletter.pdf" target="_blank">August 2017 Newsletter</a>
+                </p>
+                <p>
+                    <a href="/docs/newsletter/2017-Fall-newsletter.pdf" target="_blank">January 2017 Newsletter</a>
+                </p>
+                <p>
+                    <a href="/docs/newsletter/August-2016-Newsletter.pdf" target="_blank">August 2016 Newsletter</a>
+                </p>
+                <p>
+                    <a href="/docs/newsletter/0116-Newsltr.pdf" target="_blank">Jan 2016 Newsletter</a>
+                </p>
+                <p>
+                    <a href="/docs/newsletter/Fall-2015-Newsletter.pdf" target="_blank">August 2015 Newsletter</a>
+                </p>
+                <p>
+                    <a href="/docs/newsletter/277081-Online.pdf" target="_blank">April 2015 Newsletter</a>
+                </p>
+            </article>
+        </section>
+    {% endblock %}

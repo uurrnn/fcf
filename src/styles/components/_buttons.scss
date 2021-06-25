@@ -1,0 +1,27 @@
+.btn-text {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #000;
+    position: relative;
+    display: flex;
+    margin-right: 2rem;
+
+    &::after {
+        content: '\00BB';
+        position: relative;
+        color: $orange;
+        font-size: 2rem;
+        line-height: 1rem;
+        transform: translate3d(20px,0,0);
+        will-change: transform;
+    }
+
+    &:hover {
+        
+        &::after {
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-name: horizBounce;
+        }
+    }
+}

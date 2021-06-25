@@ -1,0 +1,21 @@
+{% set pageTitle = "About Us" %}
+
+{% extends '_layouts/default.njk' %}
+
+{% import '_macros/hero.njk' as hero %}
+
+{% block main %}
+    {{ hero.hero(pageTitle, "is-dark") }}
+    <section class="section">
+        <img class="block" src="/images/fchs.jpg" alt="Fern Creek High School"/>
+        <article class="content">
+            <p>A tradition unlike any other school in Louisville.</p>
+            <p>Fern Creek High School is proud of its rich history as a community school, educating thousands of students and generations of families. Fern Creek opened its doors in 1923, with a total enrollment of 25 students in the freshman and sophomore classes, as the first high school in Jefferson County. The school was a one-story, red brick structure on the corner of Fern Creek and Ferndale roads and contained four rooms. The first graduating class, the Class of 1926, had only six students.</p>
+            <p>The class of 1927 had 15 students, and each class had its own colors. This second graduating class chose blue and white as its colors. Enrollment has grown so much the second floor (a principals office, a library, and four more classrooms) had to be added. By 1929, a gym (which would also serve as auditorium) and four new classrooms were completed. In 1932, the colors black and gold were adopted as Fern Creek’s colors, and in 1936, the student body chose the present day colors orange and black and the fight song.</p>
+            <p>In 1941, many schools were consolidated with Fern Creek. The once rural community was developing into a middle-class town. First Creek HighSchool continued to grow, and after World War II, new construction was added to the campus. Portable buildings were added from 1947 to 1950. By this time, Valley, Fairdale, Eastern, and Okolona (now Southern) had joined Fern Creek as county high schools.</p>
+            <p>In the 1960s, even more space was needed, resulting in double sessions. In 1973, the original school building (now called the Annex) which had served as Fern Creek High School for more than 40 years was torn down. In 1974, construction of a new facility was completed, which gave Fern Creek High School and Junior High School the capacity to house 2000 students.</p>
+            <p>Today, Fern Creek is one of only three schools in Jefferson County that offers the Communications, Media, and the Arts Professional Career Theme. In addition, Fern Creek boasts 15 Advanced Placement courses and rigorously aligns all courses for post secondary success. At Fern Creek, we take pride in our long tradition of excellence while at the same time embracing cutting-edge innovation and best practices in the art and science of teaching. Our vision is to be the premier learning community and educating diverse learners</p>
+            <p>Since 1923, our school has set high expectations for all partners in the educational process (students, faculty, staff, parents, alumni, and the community) to help our students achieve their dreams. It’s a tradition unlike any other school in Jefferson County. Today, we’re proud to honor the achievements of this graduating class and send them into the  world as alumni ambassadors representing Fern Creek. Best of luck!</p>
+        </article>
+    </section>
+{% endblock %}

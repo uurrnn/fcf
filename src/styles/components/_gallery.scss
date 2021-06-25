@@ -1,0 +1,23 @@
+.gallery {
+
+    img {
+        cursor: pointer;
+
+        &:hover {
+            outline: 5px solid $orange;
+        }
+    }
+}
+
+.gallery-filters {
+    margin-bottom: 1.5rem;
+    span {
+        background: $grey;
+        text-transform: uppercase;
+        margin: 10px 10px 0 0;
+
+        &:first-of-type {
+            margin-left: 0;
+        }
+    }
+}
